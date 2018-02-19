@@ -38,19 +38,19 @@ public class CustomerTest {
 
 //setter injection
 
-@Bean
+	@Bean
 
-public Store store() {
-    Store store = new Store();
-    store.setItem(item1());
-    return store;
-}
+	public Store store() {
+	    Store store = new Store();
+	    store.setItem(item1());
+	    return store;
+	}
 
 
 We can also use XML for the same configuration of beans:
 
-<bean id="store" class="org.baeldung.store.Store">
-    <property name="item" ref="item1" />
-</bean>
+	<bean id="store" class="org.baeldung.store.Store">
+	    <property name="item" ref="item1" />
+	</bean>
 
 
