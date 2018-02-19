@@ -39,11 +39,13 @@ public class CustomerTest {
 //setter injection
 
 @Bean
+
 public Store store() {
     Store store = new Store();
     store.setItem(item1());
     return store;
 }
+
 
 We can also use XML for the same configuration of beans:
 
