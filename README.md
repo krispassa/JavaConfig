@@ -54,3 +54,21 @@ We can also use XML for the same configuration of beans:
 	</bean>
 
 
+
+
+
+//configure test class with controller without starting server
+@SpringBootApplication
+@ComponentScan("guru.springframework")
+public class DiExampleApplication {
+ 
+    public static void main(String[] args) {
+        ApplicationContext ctx = SpringApplication.run(DiExampleApplication.class, args);
+        MyController controller = (MyController) ctx.getBean("myController");
+        List<Product> products = controller.getProducts();
+ 
+        for(Product product : products){
+            System.out.println(product.getDescription());
+        }
+    }
+}
